@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" >
+
+        <ImageButton
+            android:id="@+id/callout_number_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/dial_btn_background"
+            android:src="@drawable/dial_num_1" />
+
+        <ImageButton
+            android:id="@+id/callout_number_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/dial_btn_background"
+            android:src="@drawable/dial_num_2" />
+
+        <ImageButton
+            android:id="@+id/callout_number_3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/dial_btn_background"
+            android:src="@drawable/dial_num_3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" >
+
+        <ImageButton
+            android:id="@+id/callout_number_4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/dial_btn_background"
+            android:src="@drawable/dial_num_4" />
+
+        <ImageButton
+            android:id="@+id/callout_number_5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/dial_btn_background"
+            android:src="@drawable/dial_num_5" />
+
+        <ImageButton
+            android:id="@+id/callout_number_6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/dial_btn_background"
+            android:src="@drawable/dial_num_6" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" >
+
+        <ImageButton
+            android:id="@+id/callout_number_7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/dial_btn_background"
+            android:src="@drawable/dial_num_7" />
+
+        <ImageButton
+            android:id="@+id/callout_number_8"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/dial_btn_background"
+            android:src="@drawable/dial_num_8" />
+
+        <ImageButton
+            android:id="@+id/callout_number_9"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/dial_btn_background"
+            android:src="@drawable/dial_num_9" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" >
+
+        <ImageButton
+            android:id="@+id/callout_number_star"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/dial_btn_background"
+            android:src="@drawable/dial_num_star" />
+
+        <ImageButton
+            android:id="@+id/callout_number_0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/dial_btn_background"
+            android:src="@drawable/dial_num_0" />
+
+        <ImageButton
+            android:id="@+id/callout_number_pound"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/dial_btn_background"
+            android:src="@drawable/dial_num_pound" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" >
+
+        <ImageButton
+            android:id="@+id/callout_action_add"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/dial_add_background"
+            android:src="@drawable/dial_action_add" />
+
+        <ImageButton
+            android:id="@+id/callout_action_call"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/dial_call_background"
+            android:src="@drawable/dial_action_call" />
+
+        <ImageButton
+            android:id="@+id/callout_action_delete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/dial_btn_background"
+            android:src="@drawable/dial_action_delete" />
+    </LinearLayout>
+
+</LinearLayout>

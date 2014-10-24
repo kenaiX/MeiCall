@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="umipay_base_loading">"网络正在通讯中，请稍等"</string>
+    <string name="umipay_agm">"我已阅读并同意遵守"</string>
+</resources>
+

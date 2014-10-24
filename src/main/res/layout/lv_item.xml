@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin" >
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dip"
+        android:layout_height="50dip"
+        android:layout_weight="1.0"
+        android:gravity="center"
+        android:text="name"
+        android:textColor="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/tv_telnum"
+        android:layout_width="0dip"
+        android:layout_height="50dip"
+        android:layout_weight="1.0"
+        android:gravity="center"
+        android:text="name"
+        android:textColor="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/tv_group"
+        android:layout_width="0dip"
+        android:layout_height="50dip"
+        android:layout_weight="1.0"
+        android:gravity="center"
+        android:text="group"
+        android:textColor="@android:color/darker_gray" />
+
+</LinearLayout>

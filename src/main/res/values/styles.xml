@@ -1,0 +1,13 @@
+<resources>
+
+    <style name="MyTheme" parent="@android:style/Theme.DeviceDefault.Light">
+        <item name="android:action">@style/CustomActionBar</item>
+        
+    </style>
+
+    <style name="CustomActionBar" parent="@android:style/Widget.DeviceDefault.Light.ActionBar">
+        <item name="android:background">@drawable/userinfo_total_background</item>
+        <item name="android:backgroundSplit">@drawable/userinfo_total_background</item>
+    </style>
+
+</resources>

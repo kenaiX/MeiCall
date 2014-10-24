@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+ <string name="lock_needtoapply_new">请重新启用锁屏功能以获取权限</string>
+</resources>

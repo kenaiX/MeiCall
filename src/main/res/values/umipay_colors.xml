@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 通用颜色 -->
+    <color name="transparent">#00000000</color> <!-- 透明 -->
+    <color name="transparent2">#00ffffff</color>
+    <color name="bg">#fafafa</color> <!-- 背景 -->
+
+    <!-- 背景色 -->
+    <color name="b.full">#D5000000</color>
+
+    <!-- GUI -->
+    <color name="g.gray">#bfbfbf</color>
+    <color name="g.green">#74b626</color>
+    <color name="g.orange">#f78830</color>
+    <color name="g.lorange">#f7b830</color>
+
+    <color name="widget.border">#d4d4d4</color>
+
+    <!-- 字体颜色 -->
+    <color name="f.l">#333333</color>
+    <color name="f.m">#666666</color>
+    <color name="f.s">#999999</color>
+    <color name="f.xs">#b9b9b9</color>
+    <color name="f.w">#fff</color>
+    <color name="f.g">#aaa</color>
+    <color name="f.b">#000</color>
+
+    <color name="highlight">#f78830</color>
+    
+    
+    <color name="strip">#e8e8e8</color>
+
+    <!-- 链接颜色 -->
+    <color name="link">#f78830</color>
+
+    <!-- =list 列表 -->
+    <color name="list.even">#f7f7f7</color>
+    <color name="list.line">#e8e8e8</color>
+    <color name="list.light">#fff9c9</color>
+
+    <!-- =ul -->
+    <color name="list.border">#d4d4d4</color>
+    
+    
+    <color name="umipay_oauth_textcolor_normal">#dedede</color>
+    <color name="umipay_oauth_textcolor_pressed">#fff</color>
+</resources>

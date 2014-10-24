@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/umipay_titlebar_layout"
+    style="@style/um_title_bar"
+    >
+    <TextView
+        android:id="@+id/umipay_titlebar_title"
+        style="@style/um_title"
+        android:visibility="gone"
+        />
+    <ImageButton
+        android:id="@+id/umipay_titlebar_rightbtn"
+        style="@style/um_right_btn"
+        android:background="@drawable/umipay_layout_pressed"
+        android:src="@drawable/umipay_btn_close_normal"
+        android:scaleType="centerInside"
+        />
+</RelativeLayout>

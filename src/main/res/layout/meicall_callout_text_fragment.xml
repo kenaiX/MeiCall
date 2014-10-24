@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical" >
+
+    <EditText
+        android:id="@+id/callout_text_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:focusable="false"
+        android:gravity="center_horizontal"
+        android:minHeight="50dp"
+        android:singleLine="true"
+        android:textColor="@android:color/white"
+        android:textSize="50dp" />
+
+    <ListView
+        android:id="@+id/callout_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/callout_text_2"
+        android:divider="@color/transparent" >
+    </ListView>
+
+</RelativeLayout>

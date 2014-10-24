@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cc.kenai.meicall">
+
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--捕捉错误需要的权限-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- 百度推送权限 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 云通讯推送权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 有米广告权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- 以下为可选权限 -->
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+
+    <!-- 有米支付权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.browser.permission.WRITE_HISTORY_BOOKMARKS" />
+    <!--开通短代支付所需权限（可选）-->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+
+    <application
+        android:name="cc.kenai.meicall.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/MyTheme">
+        <activity
+            android:name="cc.kenai.meicall.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:uiOptions="splitActionBarWhenNarrow"
+            android:windowSoftInputMode="stateUnspecified"
+            android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cc.kenai.meicall.voip.CallOutActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:uiOptions="splitActionBarWhenNarrow"
+            android:windowSoftInputMode="stateUnspecified"
+            android:excludeFromRecents="true"></activity>
+        <activity
+            android:name="cc.kenai.meicall.voip.CallInActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:uiOptions="splitActionBarWhenNarrow"
+            android:windowSoftInputMode="stateUnspecified"
+            android:excludeFromRecents="true"></activity>
+
+        <service
+            android:name="cc.kenai.meicall.MainService"
+            android:exported="false" />
+        <!-- 云通讯必须 -->
+        <service
+            android:name="com.hisun.phone.core.voice.CCPService"
+            android:exported="false" />
+        <!-- 百度推送接收 -->
+        <receiver android:name="cc.kenai.meicall.MainReceiver">
+            <intent-filter>
+                <!-- 接收push消息 -->
+                <action android:name="com.baidu.android.pushservice.action.MESSAGE" />
+                <!-- 接收bind、setTags等method的返回结果 -->
+                <action android:name="com.baidu.android.pushservice.action.RECEIVE" />
+                <!-- 可选。接受通知点击事件，和通知自定义内容 -->
+                <action android:name="com.baidu.android.pushservice.action.notification.CLICK" />
+            </intent-filter>
+        </receiver>
+        <!-- 百度推送必须 -->
+        <receiver android:name="com.baidu.android.pushservice.PushServiceReceiver"
+            android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="com.baidu.android.pushservice.action.notification.SHOW" />
+                <action android:name="com.baidu.android.pushservice.action.media.CLICK" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.baidu.android.pushservice.RegistrationReceiver"
+            android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.METHOD" />
+                <action android:name="com.baidu.android.pushservice.action.BIND_SYNC" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.baidu.android.pushservice.PushService"
+            android:exported="true"
+            android:process=":bdservice_v1"  >
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.PUSH_SERVICE" />
+            </intent-filter>
+        </service>
+        <!-- push结束 -->
+        <!-- 在百度开发者中心查询应用的API Key -->
+        <meta-data android:name="api_key" android:value="k0A2HOHjWUAeqdru4OdFlWGr" />
+
+        <!-- 有米广告必须 -->
+        <activity
+            android:name="net.youmi.android.AdBrowser"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        <service
+            android:name="net.youmi.android.AdService"
+            android:exported="false" >
+        </service>
+        <service
+            android:name="net.youmi.android.ExpService"
+            android:exported="false" >
+        </service>
+        <receiver
+            android:name="net.youmi.android.AdReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="net.youmi.android.offers.OffersReceiver"
+            android:exported="false" >
+        </receiver>
+        <!-- 有米支付必须 -->
+        <activity android:name="net.umipay.android.UmipayBrowser" android:theme="@style/UmipayTheme_NoFullscreen" />
+        <activity
+            android:name="com.unionpay.uppay.PayActivityEx"
+            android:label="@string/app_name"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+        <activity
+            android:name="com.unionpay.uppay.PayActivity"
+            android:configChanges="orientation|keyboardHidden|screenLayout"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.UPPay">
+        </activity>
+        <service android:name="net.umipay.android.poll.Push_Poll_service" android:exported="false" />
+        <service android:name="net.umipay.android.poll.SmsReceiverService" android:exported="false" />
+        <receiver android:name="net.umipay.android.poll.Push_Boot_Receiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="net.umipay.android.poll.Push_Alarm_Receiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="net.umipay.android.poll.push_alarm" />
+            </intent-filter>
+        </receiver>
+        <!--如有渠道需求可设置渠道号【整数】（最长支持10位）-->
+        <meta-data android:name="UMIPAY_CHANNEL" android:value="0" />
+
+
+    </application>
+
+</manifest>

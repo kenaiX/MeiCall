@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    主体layout
+    ==========
+  -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/umipay_base"
+    style="@style/um_fi" >
+    <RelativeLayout
+        android:id="@+id/umipay_base_content"
+        style="@style/um_fi"
+        >
+    </RelativeLayout>
+    <LinearLayout
+         style="@style/um_progress_ly"
+         android:id="@+id/umipay_loading_progress_ly"
+        >
+        <ProgressBar
+            android:id="@+id/umipay_loading_pregressbar"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:indeterminate="true"
+            />
+    <TextView
+        android:id="@+id/umipay_loading_textview"
+        style="@style/um_progress_text"
+        android:text="@string/umipay_base_loading"
+        />
+    </LinearLayout>
+</RelativeLayout>
